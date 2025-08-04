@@ -1,0 +1,38 @@
+=================================================================
+COMPLETE LDA ANALYSIS COMPARISON REPORT
+=================================================================
+
+Analysis Date: 2025-08-03 
+
+DATASETS INCLUDED:
+  TCGA samples: 158 
+  FUSCC samples: 360 
+  Burstein samples: 198 
+  Patient: 1 sample
+  Total samples: 717 
+
+GENE SETS:
+  All common genes: 4887 
+  Burstein marker genes available: 26 out of 80
+
+CLASSIFICATION RESULTS:
+All genes LDA:
+  Patient prediction: IM 
+  LD1 score: -0.347 
+  LD2 score: 0.011 
+  LD3 score: -1.12 
+
+Burstein genes LDA:
+  Patient prediction: BLIS 
+  LD1 score: -1.578 
+  LD2 score: 1.993 
+  LD3 score: -4.221 
+
+CONSISTENCY CHECK:
+  INCONSISTENT: All genes = IM , Burstein genes = BLIS 
+
+METHOD NOTES:
+  - Raw log2-transformed data (no z-scoring)
+  - Combined TCGA, FUSCC, and Burstein datasets
+  - 4-group classification: BLIS, IM, LAR, MES
+  - Patient compared to population-based subtypes
