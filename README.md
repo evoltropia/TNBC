@@ -91,9 +91,8 @@ R packages:
 - Patient RNA-seq: Tempus xR clinical sequencing
 - Reference cohorts: TCGA (n=158), FUSCC (n=360), Burstein (n=198)
 - Gene signatures: 78 Burstein TNBC subtype marker genes
-  Burstein et al. 2015:
 
-
+Burstein et al. 2015:
 "Comprehensive Genomic Analysis Identifies Novel Subtypes and Targets of Triple-Negative Breast Cancer"
 
 Published in: Clinical Cancer Research
