@@ -64,7 +64,7 @@ The analysis scripts generate output folders in Results/:
 
 ```
 R packages:
-"Rsubread",      # For reading BAM files and counting features
+  "Rsubread",      # For reading BAM files and counting features
   "GenomicFeatures", # For handling genomic annotations
   "DESeq2",        # For normalization and data handling
   "edgeR",         # For TPM calculation
