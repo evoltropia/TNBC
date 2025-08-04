@@ -1,0 +1,119 @@
+=================================================================
+                 PATIENT TNBC SUBTYPE ANALYSIS REPORT
+                    Based on Burstein Marker Genes
+=================================================================
+
+Analysis Date: 2025-08-03 
+Analysis Time: 2025-08-03 14:21:15.131704 
+
+METHODOLOGY:
+- Reference datasets: TCGA, FUSCC, Burstein ( 716 samples )
+- Batch correction: ComBat with subtype preservation
+- Gene set: Burstein TNBC marker genes ( 26 genes )
+- Normalization: Z-score across samples
+- Clustering: Hierarchical (Ward.D2, Euclidean distance)
+
+=================================================================
+                        PATIENT CLASSIFICATION
+=================================================================
+
+SIMILARITY TO KNOWN SUBTYPES (Correlation):
+  *** BEST MATCH: IM (r = 0.392) ***
+      BLIS (r = 0.308)
+      LAR (r = -0.431)
+      MES (r = -0.576)
+
+DISTANCE TO SUBTYPE CENTROIDS (Euclidean):
+  *** CLOSEST: IM (distance = 9.002) ***
+      BLIS (distance = 9.087)
+      MES (distance = 10.942)
+      LAR (distance = 11.438)
+
+=================================================================
+                    PATIENT'S TOP MARKER GENES
+=================================================================
+
+TOP 15 UPREGULATED GENES (vs population mean):
+   1. HERC5        (z-score:   5.27)
+   2. LAMP3        (z-score:   4.26)
+   3. GBP5         (z-score:   3.55)
+   4. PROM1        (z-score:   1.34)
+   5. ST3GAL6      (z-score:   1.07)
+   6. BCL11A       (z-score:   0.81)
+   7. SFRP1        (z-score:   0.42)
+   8. GBP1         (z-score:   0.27)
+   9. STAT1        (z-score:   0.20)
+  10. GABRP        (z-score:   0.16)
+
+TOP 15 DOWNREGULATED GENES (vs population mean):
+   1. SPOCK1       (z-score:  -2.36)
+   2. AGTR1        (z-score:  -2.04)
+   3. CD2          (z-score:  -1.90)
+   4. GPX3         (z-score:  -1.66)
+   5. TIMP4        (z-score:  -1.53)
+   6. PTGER4       (z-score:  -1.53)
+   7. SIDT1        (z-score:  -1.29)
+   8. AIM2         (z-score:  -1.08)
+   9. ERBB4        (z-score:  -0.98)
+  10. CHI3L1       (z-score:  -0.92)
+
+=================================================================
+                  SUBTYPE-SPECIFIC GENE SIGNATURES
+=================================================================
+
+GENES WHERE PATIENT MATCHES IM AS THE DOMINANT SUBTYPE:
+  HERC5       : Patient= 5.27 | All subtypes: IM=0.70, BLIS=-0.14, LAR=-0.68, MES=-0.02
+  LAMP3       : Patient= 4.26 | All subtypes: IM=0.69, BLIS=-0.13, LAR=-0.71, MES=0.01
+  GBP5        : Patient= 3.55 | All subtypes: IM=0.84, BLIS=-0.42, LAR=-0.31, MES=-0.03
+
+GENES WHERE PATIENT MATCHES BLIS AS THE DOMINANT SUBTYPE:
+  CD2         : Patient=-1.90 | All subtypes: IM=0.76, BLIS=-0.63, LAR=-0.22, MES=0.46
+  PTGER4      : Patient=-1.53 | All subtypes: IM=0.38, BLIS=-0.62, LAR=-0.01, MES=0.76
+  SIDT1       : Patient=-1.29 | All subtypes: IM=-0.03, BLIS=-0.87, LAR=1.21, MES=0.56
+  NAT1        : Patient=-0.88 | All subtypes: IM=-0.15, BLIS=-0.60, LAR=0.92, MES=0.49
+  BCL11A      : Patient= 0.81 | All subtypes: IM=0.24, BLIS=0.57, LAR=-1.23, MES=-0.21
+  PIP         : Patient=-0.79 | All subtypes: IM=-0.45, BLIS=-0.55, LAR=1.22, MES=0.47
+  SLAMF7      : Patient=-0.59 | All subtypes: IM=0.81, BLIS=-0.58, LAR=-0.25, MES=0.32
+
+GENES WHERE PATIENT MATCHES LAR AS THE DOMINANT SUBTYPE:
+  CHI3L1      : Patient=-0.92 | All subtypes: IM=0.33, BLIS=0.25, LAR=-0.93, MES=0.02
+
+GENES WHERE PATIENT MATCHES MES AS THE DOMINANT SUBTYPE:
+  No genes where patient matches MES as the dominant subtype
+
+=================================================================
+                         INTERPRETATION
+=================================================================
+
+SUMMARY:
+Your patient shows strongest similarity to the IM subtype
+(correlation = 0.392 ).
+
+CONFIDENCE: LOW - Weak correlations suggest mixed or atypical features.
+
+KEY BIOLOGICAL FEATURES:
+Highly expressed genes: HERC5, LAMP3, GBP5, PROM1, ST3GAL6 
+Lowly expressed genes: SPOCK1, AGTR1, CD2, GPX3, TIMP4 
+
+RECOMMENDATIONS:
+1. Review the focused heatmap (patient_vs_subtypes_focused.pdf) for visual confirmation
+2. Consider the IM subtype-specific treatment implications
+3. Validate key marker genes through additional methods if needed
+4. Note any discordant genes that don't fit the predicted subtype pattern
+
+=================================================================
+                           FILES CREATED
+=================================================================
+
+HEATMAPS:
+- burstein_genes_heatmap_combat.pdf/.png (Full dataset with patient highlighted)
+- patient_vs_subtypes_focused.pdf/.png (Patient vs subtype centroids)
+
+DATA FILES:
+- patient_burstein_gene_expression.csv (All gene expression values)
+- burstein_heatmap_results_combat.RData (Complete analysis workspace)
+- PATIENT_ANALYSIS_REPORT.txt (This report)
+
+=================================================================
+Analysis completed: 2025-08-03 14:21:15.20651 
+=================================================================
