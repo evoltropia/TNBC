@@ -37,8 +37,8 @@ TNBC_single_patient_subtyping/
 - `burstein_cel_processing.R` - Processes Burstein reference dataset CEL files and performs normalization
 
 ### Analysis Scripts (Code/)
-- `lda_combat_analysis_v4.R` - Performs LDA classification with ComBat batch correction using both all genes and Burstein marker genes on Burstein HUSCC and TCGA Datasets
-- `burstein_heatmap.R` - Generates visualizations and result summaries
+- `complete_lda_analysis.R` - Performs LDA classification with ComBat batch correction using both all genes and Burstein marker genes on Burstein HUSCC and TCGA Datasets
+- `burstein_heatmap_combat4.R` - Generates visualizations and result summaries
 
 ## Results
 
